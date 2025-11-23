@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="mb-4">Upload Your Image for AI Outfit Matching</h3>
+
+<div class="card p-4 shadow">
+    <form action="/image_recommend" method="POST" enctype="multipart/form-data">
+        <label><b>Select Your Image:</b></label>
+        <input type="file" name="file" class="form-control" required>
+
+        <button class="btn btn-dark mt-4 w-100">Get Outfit Suggestions</button>
+    </form>
+</div>
+
+{% endblock %}

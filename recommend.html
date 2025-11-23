@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="mb-3">Recommended Outfits For You</h3>
+
+<div class="row">
+    {% for item in results %}
+    <div class="col-md-4">
+        <div class="card mb-4 shadow">
+            <img src="{{ item['Image'] }}" class="card-img-top" alt="outfit">
+            <div class="card-body">
+                <h5 class="card-title">{{ item['Product'] }}</h5>
+                <p class="card-text">{{ item['Description'] }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<a href="/" class="btn btn-dark mt-3">Back to Home</a>
+
+{% endblock %}
